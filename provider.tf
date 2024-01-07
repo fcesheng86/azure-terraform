@@ -18,13 +18,13 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
-  use_cli = true
   features {
     key_vault {
       purge_soft_delete_on_destroy    = true
       recover_soft_deleted_key_vaults = true
     }
   }
+  client_id = "af12f5d3-03b4-4705-8af6-67904a024bf5"
 
 }
 

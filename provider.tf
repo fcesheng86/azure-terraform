@@ -1,11 +1,11 @@
 # Azure Provider source and version being used
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "nic-tfstate-rg"
-    storage_account_name = "nictfstate010724"
-    container_name       = "tfstate"
-    key                  = "prod.terraform.tfstate"
-  }
+  # backend "azurerm" {
+  #   resource_group_name  = "nic-tfstate-rg"
+  #   storage_account_name = "nictfstate010724"
+  #   container_name       = "tfstate"
+  #   key                  = "prod.terraform.tfstate"
+  # }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"

@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4.1.1
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
@@ -38,10 +38,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4.1.1
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: '1.5.7' # Specify the Terraform version
 
     - name: Terraform Init
       run: terraform init

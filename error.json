@@ -1,0 +1,28 @@
+{
+  "info": {
+    "evaluationDetails": {
+      "evaluatedExpressions": [
+        {
+          "expression": "location",
+          "expressionKind": "Field",
+          "expressionValue": "southeastasia",
+          "operator": "In",
+          "path": "location",
+          "result": "False",
+          "targetValue": ["eastus"]
+        }
+      ]
+    },
+    "policyAssignmentDisplayName": "Only allow specific locations for resource deployment",
+    "policyAssignmentId": "/subscriptions/5b79d5a5-399e-439f-8baf-a8ca1654cc3b/providers/Microsoft.Authorization/policyAssignments/6aadfd1b92f54768b05e79e6",
+    "policyAssignmentName": "6aadfd1b92f54768b05e79e6",
+    "policyAssignmentParameters": { "allowedLocations": ["eastus"] },
+    "policyAssignmentScope": "/subscriptions/5b79d5a5-399e-439f-8baf-a8ca1654cc3b",
+    "policyDefinitionDisplayName": "Only allow specific locations for resource deployment",
+    "policyDefinitionEffect": "deny",
+    "policyDefinitionId": "/subscriptions/5b79d5a5-399e-439f-8baf-a8ca1654cc3b/providers/Microsoft.Authorization/policyDefinitions/1e45e263-bca5-4db0-a8c8-8b0f4dc0e07c",
+    "policyDefinitionName": "1e45e263-bca5-4db0-a8c8-8b0f4dc0e07c",
+    "policyExemptionIds": []
+  },
+  "type": "PolicyViolation"
+}

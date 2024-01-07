@@ -9,18 +9,29 @@ terraform {
       source  = "hashicorp/azuread"
       version = ">=2.47.0"
     }
+    azapi = {
+      source  = "Azure/azapi"
+      version = "1.11.0"
+    }
   }
 }
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
-  # subscription_id            = "5b79d5a5-399e-439f-8baf-a8ca1654cc3b"
-  # tenant_id                  = "a6fadded-8a88-471f-a9f1-4fbd7bb0f321"
   use_cli = true
-  features {}
+  features {
+    key_vault {
+      purge_soft_delete_on_destroy    = true
+      recover_soft_deleted_key_vaults = true
+    }
+  }
 
 }
 
 provider "azuread" {
   # Configuration options
+}
+
+provider "azapi" {
+
 }
